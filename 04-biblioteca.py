@@ -9,7 +9,7 @@ class Livro:
 # A classe Biblioteca gerencia uma coleção de objetos Livro.
 class Biblioteca:    
     def __init__(self, lista=None):
-        self.livros = lista if lista is not None else []
+        self.livros = lista
         
     def add(self, livro):
         self.livros.append(livro)
@@ -25,6 +25,7 @@ class Biblioteca:
 # catalogo_livro: Exibe todos os livros na biblioteca.
 
 biblioteca_x = Biblioteca()
+biblioteca_x.livros=[]
 livro1 = Livro("Dom Casmurro", "Machado de Assis")
 biblioteca_x.add(livro1)
 
